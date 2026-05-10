@@ -6,8 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getAssetPath(path: string) {
-  const isProd = process.env.NODE_ENV === 'production';
-  const basePath = isProd ? '/MJ-VP-' : '';
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
   
   // Ensure path starts with /
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;

@@ -4,12 +4,14 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   output: 'export',
   basePath: isProd ? '/MJ-VP-' : '',
-  assetPrefix: isProd ? '/MJ-VP-/' : '', 
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isProd ? '/MJ-VP-' : '',
   },
 }
 
