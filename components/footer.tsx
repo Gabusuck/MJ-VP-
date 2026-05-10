@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Building2, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 
 const footerLinks = {
@@ -37,7 +38,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="MJ & VP Construção Civil Logo" className="h-12 w-auto" />
+              <Image 
+                src="/logo.png" 
+                alt="MJ & VP Construção Civil Logo" 
+                width={200} 
+                height={50} 
+                className="h-12 w-auto object-contain" 
+              />
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6 max-w-sm">
               Construindo sonhos com qualidade, segurança e 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, Building2 } from "lucide-react";
@@ -23,7 +24,13 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="MJ & VP Construção Civil Logo" className="h-10 w-auto" />
+            <Image 
+              src="/logo.png" 
+              alt="MJ & VP Construção Civil Logo" 
+              width={160} 
+              height={40} 
+              className="h-10 w-auto object-contain" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,7 +64,13 @@ export function Header() {
             <SheetContent side="right" className="w-full sm:w-80">
               <div className="flex flex-col gap-6 mt-8">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                  <img src="/logo.png" alt="MJ & VP Construção Civil Logo" className="h-10 w-auto" />
+                  <Image 
+                    src="/logo.png" 
+                    alt="MJ & VP Construção Civil Logo" 
+                    width={160} 
+                    height={40} 
+                    className="h-10 w-auto object-contain" 
+                  />
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navItems.map((item) => (
