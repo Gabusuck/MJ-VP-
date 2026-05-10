@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, Building2 } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const navItems = [
   { label: "Início", href: "#inicio" },
@@ -25,7 +26,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image 
-              src="/logo.png" 
+              src={getAssetPath("/logo.png")}
               alt="MJ & VP Construção Civil Logo" 
               width={160} 
               height={40} 
@@ -65,7 +66,7 @@ export function Header() {
               <div className="flex flex-col gap-6 mt-8">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
                   <Image 
-                    src="/logo.png" 
+                    src={getAssetPath("/logo.png")}
                     alt="MJ & VP Construção Civil Logo" 
                     width={160} 
                     height={40} 

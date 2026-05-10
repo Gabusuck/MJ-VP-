@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -9,7 +10,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-construction.jpg"
+          src={getAssetPath("/images/hero-construction.jpg")}
           alt="Construção moderna"
           fill
           className="object-cover"

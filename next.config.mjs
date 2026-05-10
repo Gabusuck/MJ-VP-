@@ -4,6 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   output: 'export',
   basePath: isProd ? '/MJ-VP-' : '',
+  assetPrefix: isProd ? '/MJ-VP-/' : '', 
   typescript: {
     ignoreBuildErrors: true,
   },

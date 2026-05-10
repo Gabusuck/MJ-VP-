@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Calendar, ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const categories = ["Todos", "Residencial", "Comercial", "Industrial", "Remodelação"];
 
@@ -142,7 +143,7 @@ export function Projects() {
             >
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-4">
                 <Image
-                  src={project.images[0]}
+                  src={getAssetPath(project.images[0])}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -180,7 +181,7 @@ export function Projects() {
               <>
                 <div className="relative aspect-video rounded-lg overflow-hidden mb-4 group">
                   <Image
-                    src={selectedProject.images[currentImageIndex]}
+                    src={getAssetPath(selectedProject.images[currentImageIndex])}
                     alt={`${selectedProject.title} - Imagem ${currentImageIndex + 1}`}
                     fill
                     className="object-cover"

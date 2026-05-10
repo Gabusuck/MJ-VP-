@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Building2, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const footerLinks = {
   empresa: [
@@ -39,7 +40,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image 
-                src="/logo.png" 
+                src={getAssetPath("/logo.png")}
                 alt="MJ & VP Construção Civil Logo" 
                 width={200} 
                 height={50} 
